@@ -19,3 +19,4 @@ data/chat_history.json
 !data/processed/.gitkeep
 !data/raw/.gitkeep
 * copy.py
+*copy.py
