@@ -18,3 +18,4 @@ data/chat_history.json
 !data/faiss_index/.gitkeep
 !data/processed/.gitkeep
 !data/raw/.gitkeep
+* copy.py
