@@ -1,3 +1,4 @@
+import json
 import time
 import subprocess
 import sys
@@ -100,6 +101,29 @@ run_pipeline()
 from src.chatbot import ask_bot
 
 # ============================================================
+# CHAT HISTORY FILE
+# ============================================================
+
+CHAT_HISTORY_FILE = PROJECT_ROOT / "data" / "chat_history.json"
+
+
+def load_history():
+    if CHAT_HISTORY_FILE.exists():
+        try:
+            return json.loads(CHAT_HISTORY_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            return []
+    return []
+
+
+def save_history(messages):
+    CHAT_HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
+    CHAT_HISTORY_FILE.write_text(
+        json.dumps(messages, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+# ============================================================
 # CUSTOM CSS
 # ============================================================
 
@@ -183,6 +207,8 @@ https://www.cholamandalam.com/
 
         st.session_state.messages = []
 
+        save_history([])
+
         st.rerun()
 
 # ============================================================
@@ -201,7 +227,7 @@ st.caption(
 
 if "messages" not in st.session_state:
 
-    st.session_state.messages = []
+    st.session_state.messages = load_history()
 
 # ============================================================
 # DISPLAY CHAT HISTORY
@@ -361,3 +387,5 @@ if query:
         "method": method
 
     })
+
+    save_history(st.session_state.messages)
