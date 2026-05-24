@@ -11,8 +11,14 @@ wheels/
 
 # Generated data files
 data/faiss_index/*
+!data/faiss_index/.gitkeep
+
 data/processed/*
+!data/processed/.gitkeep
+
 data/raw/*
+!data/raw/.gitkeep
+
 data/chat_history.json
 
 !data/faiss_index/.gitkeep
