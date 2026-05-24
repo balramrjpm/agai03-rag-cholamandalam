@@ -86,6 +86,7 @@ agai03-rag-cholamandalam/
 │   ├── raw/
 │   ├── processed/
 │   ├── faiss_index/
+|   ├── qa_dataset.csv
 │   ├── qa_dataset.json
 │   └── qa_dataset.pdf
 │
