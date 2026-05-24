@@ -1,0 +1,29 @@
+[project]
+name = "agai03-rag-cholamandalam"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "faiss-cpu>=1.13.2",
+    "langchain>=1.3.1",
+    "langchain-community>=0.4.1",
+    "langchain-core>=1.4.0",
+    "langchain-ollama>=1.1.0",
+    "langchain-text-splitters>=1.1.2",
+    "lxml>=6.1.0",
+    "numpy>=2.4.5",
+    "ollama>=0.6.2",
+    "pandas>=3.0.3",
+    "pandas-stubs>=3.0.0.260204",
+    "python-dotenv>=1.2.2",
+    "reportlab>=4.5.1",
+    "requests>=2.34.2",
+    "scikit-learn>=1.8.0",
+    "sentence-transformers>=5.5.0",
+    "streamlit>=1.57.0",
+    "torch>=2.12.0",
+    "torchvision>=0.27.0",
+    "tqdm>=4.67.3",
+]

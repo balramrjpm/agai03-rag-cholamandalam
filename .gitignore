@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Generated data files
+data/faiss_index/*
+data/processed/*
+data/raw/*
+
+!data/faiss_index/.gitkeep
+!data/processed/.gitkeep
+!data/raw/.gitkeep
